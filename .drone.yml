@@ -17,7 +17,7 @@ steps:
   - name: unit-tests
     image: weboaks/node-karma-protractor-chrome:debian-root
     commands:
-      - npm run test
+      - npm run test:coverage
   - name: end-to-end-tests
     image: weboaks/node-karma-protractor-chrome:debian-root
     commands:
