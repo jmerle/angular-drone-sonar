@@ -3,12 +3,20 @@
 
 const { SpecReporter } = require('jasmine-spec-reporter');
 
+const capabilities = {
+  browserName: 'chrome',
+};
+
+if (process.env.DRONE === 'true') {
+  capabilities.chromeOptions = {
+    args: ['no-sandbox', 'headless', 'disable-gpu'],
+  };
+}
+
 exports.config = {
   allScriptsTimeout: 11000,
   specs: ['./src/**/*.e2e-spec.ts'],
-  capabilities: {
-    browserName: 'chrome',
-  },
+  capabilities: capabilities,
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',

@@ -1,6 +1,8 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
+const isCI = process.env.DRONE === 'true';
+
 module.exports = function(config) {
   config.set({
     basePath: '',
@@ -25,8 +27,14 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    singleRun: false,
+    browsers: [isCI ? 'ChromeHeadlessWithoutSandbox' : 'Chrome'],
+    customLaunchers: {
+      ChromeHeadlessWithoutSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox'],
+      },
+    },
+    singleRun: isCI,
     restartOnFileChange: true,
   });
 };
