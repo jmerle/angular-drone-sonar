@@ -3,8 +3,8 @@
 [![Build Status](https://drone.jmerle.dev/api/badges/jmerle/angular-drone-sonar/status.svg)](https://drone.jmerle.dev/jmerle/angular-drone-sonar)
 [![Quality Gate Status](https://sonar.jmerle.dev/api/project_badges/measure?project=jmerle%3Aangular-drone-sonar&metric=alert_status)](https://sonar.jmerle.dev/dashboard?id=jmerle%3Aangular-drone-sonar)
 [![Coverage](https://sonar.jmerle.dev/api/project_badges/measure?project=jmerle%3Aangular-drone-sonar&metric=coverage)](https://sonar.jmerle.dev/dashboard?id=jmerle%3Aangular-drone-sonar)
-[![Maintainability Rating](https://sonar.jmerle.dev/api/project_badges/measure?project=jmerle%3Aangular-drone-sonar&metric=sqale_rating)](https://sonar.jmerle.dev/dashboard?id=jmerle%3Aangular-drone-sonar)
-[![Security Rating](https://sonar.jmerle.dev/api/project_badges/measure?project=jmerle%3Aangular-drone-sonar&metric=security_rating)](https://sonar.jmerle.dev/dashboard?id=jmerle%3Aangular-drone-sonar)
+[![Bugs](https://sonar.jmerle.dev/api/project_badges/measure?project=jmerle%3Aangular-drone-sonar&metric=bugs)](https://sonar.jmerle.dev/dashboard?id=jmerle%3Aangular-drone-sonar)
+[![Vulnerabilities](https://sonar.jmerle.dev/api/project_badges/measure?project=jmerle%3Aangular-drone-sonar&metric=vulnerabilities)](https://sonar.jmerle.dev/dashboard?id=jmerle%3Aangular-drone-sonar)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
 
