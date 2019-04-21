@@ -21,6 +21,7 @@ Here are the changes that were made to the standard angular-cli project:
 - The `sonar_token` secret has been added to the Drone CI configuration with a SonarQube token that has permission to execute analyses
 - The `README.md` file has been updated with Drone CI and SonarQube badges
 - The `sonar-project.properties` file has been added with Sonar Scanner configuration for code coverage reporting
+- The `src/app/app-routing.module.spec.ts` file has been added to achieve 100% test coverage
 
 ## Development server
 
