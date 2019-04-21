@@ -1,0 +1,33 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: install
+    image: node:lts
+    commands:
+      - npm ci
+  - name: build
+    image: node:lts
+    commands:
+      - npm run build
+  - name: lint
+    image: node:lts
+    commands:
+      - npm run lint
+  - name: unit-tests
+    image: weboaks/node-karma-protractor-chrome:headless
+    commands:
+      - npm run test
+  - name: end-to-end-tests
+    image: weboaks/node-karma-protractor-chrome:headless
+    commands:
+      - npm run e2e
+  - name: analysis
+    image: aosapps/drone-sonar-plugin
+    settings:
+      sonar_host: https://sonar.jmerle.dev
+      sonar_token:
+        from_secret: sonar_token
+    when:
+      branch:
+        - master
